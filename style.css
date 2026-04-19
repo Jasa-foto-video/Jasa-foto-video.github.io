@@ -10,11 +10,6 @@ img {
   display: block;
 }
 
-/* ========================= ROOT ========================= */
-:root {
-  --header-height: 170px;
-}
-
 /* ========================= BODY ========================= */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -23,7 +18,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 
-  padding-top: var(--header-height);
+  /* DESKTOP OFFSET (SUDAH BENAR) */
+  padding-top: 160px;
 
   position: relative;
   z-index: 0;
@@ -124,7 +120,9 @@ nav a:hover {
 /* ========================= SECTION ========================= */
 .section {
   padding: 50px 20px;
-  scroll-margin-top: var(--header-height);
+
+  /* OFFSET DESKTOP (SUDAH BENAR) */
+  scroll-margin-top: 160px;
 }
 
 .section h2 {
@@ -230,19 +228,20 @@ footer {
   font-size: 13px;
 }
 
-/* ========================= RESPONSIVE ========================= */
+/* ========================= MOBILE FIX (INI KUNCI) ========================= */
 @media (max-width: 768px) {
 
-  :root {
-    --header-height: 200px; /* FIX MOBILE TABRAKAN */
+  body {
+    padding-top: 200px; /* lebih tinggi karena nav jadi 2 baris */
+  }
+
+  .section {
+    scroll-margin-top: 200px;
+    padding: 40px 15px;
   }
 
   header h1 {
     font-size: 22px;
-  }
-
-  .section {
-    padding: 40px 15px;
   }
 }
 
