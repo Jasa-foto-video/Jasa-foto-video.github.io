@@ -317,3 +317,15 @@ footer {
   object-fit: contain;
   margin: 40px auto;
 }
+
+:root {
+  --header-height: 180px;
+}
+
+body {
+  padding-top: var(--header-height);
+}
+
+.section {
+  scroll-margin-top: var(--header-height);
+}
