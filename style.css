@@ -221,27 +221,40 @@ footer {
   }
 
 /* =========================
-   LOGO SCROLL
+   LOGO SCROLL FIX
 ========================= */
 
 .logo-section {
   overflow: hidden;
   padding: 50px 0;
   margin-top: 50px;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 .logo-track {
   display: flex;
   align-items: center;
   gap: 80px;
+
   width: max-content;
-  animation: scrollLogo 60s linear infinite;
+
+  animation: scrollLogo 30s linear infinite;
   will-change: transform;
 }
 
+/* INI KUNCI */
 .logo-track img {
-  height: 150px;
+  height: 120px;
+  width: auto;
+  flex-shrink: 0; /* WAJIB */
+
   opacity: 0.75;
   filter: grayscale(100%);
   transition: 0.3s;
@@ -254,11 +267,10 @@ footer {
 }
 
 @keyframes scrollLogo {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-  
-  .section {
-    padding: 40px 15px;
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
