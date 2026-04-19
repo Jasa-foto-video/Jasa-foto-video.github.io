@@ -220,6 +220,44 @@ footer {
     font-size: 22px;
   }
 
+/* =========================
+   LOGO SCROLL
+========================= */
+
+.logo-section {
+  overflow: hidden;
+  padding: 50px 0;
+  margin-top: 50px;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: scrollLogo 60s linear infinite;
+  will-change: transform;
+}
+
+.logo-track img {
+  height: 150px;
+  opacity: 0.75;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+@keyframes scrollLogo {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+  
   .section {
     padding: 40px 15px;
   }
