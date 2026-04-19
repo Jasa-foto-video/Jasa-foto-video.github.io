@@ -90,9 +90,31 @@ header {
 /* LOGO */
 .logo {
   width: 110px;
-  margin-bottom: 15px;
+  height: 110px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  padding: 6px;
+  background: #020617;
+
+  /* double ring */
+  border: 2px solid #22d3ee;
+  outline: 2px solid rgba(34, 211, 238, 0.25);
+  outline-offset: 4px;
+
+  /* glow halus */
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.4);
+
+  transition: all 0.3s ease;
 }
 
+/* efek hover biar hidup */
+.logo:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.7);
+  outline-color: rgba(34, 211, 238, 0.5);
+}
 /* TITLE */
 header h1 {
   font-size: 26px;
