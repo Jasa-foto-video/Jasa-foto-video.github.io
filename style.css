@@ -221,56 +221,35 @@ footer {
   }
 
 /* =========================
-   LOGO SCROLL FIX
+   LOGO SCROLL FINAL FIX
 ========================= */
 
 .logo-section {
   overflow: hidden;
-  padding: 50px 0;
-  margin-top: 50px;
-
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
+  width: 100%;
 }
 
 .logo-track {
   display: flex;
-  align-items: center;
-  gap: 80px;
+  gap: 60px;
 
-  width: max-content;
-
-  animation: scrollLogo 30s linear infinite;
-  will-change: transform;
+  animation: scrollLogo 20s linear infinite;
 }
 
-/* INI KUNCI */
+/* FIX SIZE */
 .logo-track img {
-  height: 120px;
-  width: auto;
-  flex-shrink: 0; /* WAJIB */
-
-  opacity: 0.75;
-  filter: grayscale(100%);
-  transition: 0.3s;
+  height: 80px;
+  width: auto !important;
+  max-width: none !important;
+  flex-shrink: 0;
 }
 
-.logo-track img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
-  transform: scale(1.08);
-}
-
+/* ANIMASI */
 @keyframes scrollLogo {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
