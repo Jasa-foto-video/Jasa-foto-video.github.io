@@ -329,3 +329,15 @@ body {
 .section {
   scroll-margin-top: var(--header-height);
 }
+
+:root {
+  --header-height: 160px;
+}
+
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 140px;
+  }
+}
