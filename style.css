@@ -232,7 +232,7 @@ footer {
 @media (max-width: 768px) {
 
   body {
-    padding-top: 300px; /* lebih tinggi karena nav jadi 2 baris */
+    padding-top: 350px; /* lebih tinggi karena nav jadi 2 baris */
   }
 
   .section {
