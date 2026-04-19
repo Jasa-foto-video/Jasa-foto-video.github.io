@@ -87,6 +87,17 @@ header {
   align-items: center;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ini kunci center semua */
+  text-align: center;
+}
+
+.hero-content a {
+  display: inline-block;
+}
+
 /* LOGO */
 .logo {
   width: 110px;
